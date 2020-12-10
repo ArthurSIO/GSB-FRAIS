@@ -26,6 +26,7 @@ class __TwigTemplate_903987ce57369fe1bdce697593f16b5279f7636495f066c489f98814eb3
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -56,130 +57,68 @@ class __TwigTemplate_903987ce57369fe1bdce697593f16b5279f7636495f066c489f98814eb3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Connexion Comptable";
+        // line 4
+        echo "    Connexion Comptable
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 5
+    // line 7
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 8
+        echo "    <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo "\" type=\"text/css\" />
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "
-<style>
-section.login-container{
-    display: flex;
-    position: fixed;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  
-    background: #031321;
-}
-section.login-container > div{
-    width: 450px;
-  
-    margin: auto;
-  
-    padding: 20px;
-
-    text-align: center;
-
-    background: #eee;
-    border: 1px solid #ccc;
-
-    border-radius: 5px;
-
-}
-section.login-container form{
-    display: flex;
-    flex-direction: column;
-}
-form input[type=\"password\"], 
-form input[type=\"text\"], 
-form button[type=\"submit\"] {
-    width: 100%;
-  
-    margin-bottom: 32px;
-    padding: 16px;
-  
-    color: #333;
-
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    outline: 0;
-}
-form input[type=\"text\"]:focus,
-form input[type=\"text\"]:hover,
-form input[type=\"password\"]:focus,
-form input[type=\"password\"]:hover {
-    background-color: #ccc;
-}
-form button[type=\"submit\"] {
-    font-weight: bold;
-    color: #eee;
-    text-transform: uppercase;
-
-    background-color: #2196f3;
-}
-
-form button[type=\"submit\"]:focus,
-form button[type=\"submit\"]:hover {
-    background-color: #255784;
-}
-html{
-    box-sizing: border-box;
-}
-
-*,*:before,*:after{
-    box-sizing: inherit;
-}
-body{
-    background-color: white;
-    font-family: Helvetica, sans-serif;
-}
-.wrapper{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
-<div class=\"wrapper\">
-    <section class=\"login-container\">
-        <div>
-\t\t\t
-            <header>
-\t\t\t\t";
-        // line 92
-        if ((0 === twig_compare((isset($context["erreur"]) || array_key_exists("erreur", $context) ? $context["erreur"] : (function () { throw new RuntimeError('Variable "erreur" does not exist.', 92, $this->source); })()), 1))) {
-            // line 93
-            echo "\t\t\t\t<p>Attention ! Login ou mot de passe incorrect.</p>
-\t\t\t\t";
+        // line 12
+        echo "    <div class=\"wrapper\">
+        <section style=\"left: 400px !important; top: 120px !important; right: 400px !important;\" class=\"login-container\">
+            <div>\t\t\t
+                <header>
+                    <img src=\"/images/gsb.png\" alt=\"\" />
+                    <h2>Identification Comptable</h2>
+                    ";
+        // line 18
+        if ((isset($context["erreur"]) || array_key_exists("erreur", $context))) {
+            // line 19
+            echo "                        ";
+            if ((0 === twig_compare((isset($context["erreur"]) || array_key_exists("erreur", $context) ? $context["erreur"] : (function () { throw new RuntimeError('Variable "erreur" does not exist.', 19, $this->source); })()), 1))) {
+                // line 20
+                echo "                        <p>Attention ! Login ou mot de passe incorrect.</p>
+                        ";
+            }
+            // line 22
+            echo "                    ";
         }
-        // line 95
-        echo "                <h2>Identification Comptable</h2>
-            </header>
+        // line 23
+        echo "                </header>
 
-            <form action=\"";
-        // line 98
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("menuVisiteur");
-        echo "\" method=\"post\">
-              
-                <input type=\"text\" id=\"login\" name=\"nom_utilisateur\" placeholder=\"Nom d'utilisateur\" required=\"required\"/>
-                <input type=\"password\" id=\"mdp\" name=\"mdp_utilisateur\" placeholder=\"Mot de passe\" required=\"required\"/>
-                <button type=\"submit\">Connexion</button>
-
-            </form>
-        </div>
-    </section>
-</div>
+                ";
+        // line 25
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formulaire"]) || array_key_exists("formulaire", $context) ? $context["formulaire"] : (function () { throw new RuntimeError('Variable "formulaire" does not exist.', 25, $this->source); })()), 'form');
+        echo "
+            </div>
+        </section>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -198,120 +137,39 @@ body{
 
     public function getDebugInfo()
     {
-        return array (  172 => 98,  167 => 95,  163 => 93,  161 => 92,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  117 => 25,  113 => 23,  110 => 22,  106 => 20,  103 => 19,  101 => 18,  93 => 12,  86 => 11,  76 => 8,  69 => 7,  61 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Connexion Comptable{% endblock %}
-
-{% block body %}
-
-<style>
-section.login-container{
-    display: flex;
-    position: fixed;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  
-    background: #031321;
-}
-section.login-container > div{
-    width: 450px;
-  
-    margin: auto;
-  
-    padding: 20px;
-
-    text-align: center;
-
-    background: #eee;
-    border: 1px solid #ccc;
-
-    border-radius: 5px;
-
-}
-section.login-container form{
-    display: flex;
-    flex-direction: column;
-}
-form input[type=\"password\"], 
-form input[type=\"text\"], 
-form button[type=\"submit\"] {
-    width: 100%;
-  
-    margin-bottom: 32px;
-    padding: 16px;
-  
-    color: #333;
-
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    outline: 0;
-}
-form input[type=\"text\"]:focus,
-form input[type=\"text\"]:hover,
-form input[type=\"password\"]:focus,
-form input[type=\"password\"]:hover {
-    background-color: #ccc;
-}
-form button[type=\"submit\"] {
-    font-weight: bold;
-    color: #eee;
-    text-transform: uppercase;
-
-    background-color: #2196f3;
-}
-
-form button[type=\"submit\"]:focus,
-form button[type=\"submit\"]:hover {
-    background-color: #255784;
-}
-html{
-    box-sizing: border-box;
-}
-
-*,*:before,*:after{
-    box-sizing: inherit;
-}
-body{
-    background-color: white;
-    font-family: Helvetica, sans-serif;
-}
-.wrapper{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
-<div class=\"wrapper\">
-    <section class=\"login-container\">
-        <div>
-\t\t\t
-            <header>
-\t\t\t\t{% if erreur == 1 %}
-\t\t\t\t<p>Attention ! Login ou mot de passe incorrect.</p>
-\t\t\t\t{% endif %}
-                <h2>Identification Comptable</h2>
-            </header>
-
-            <form action=\"{{path( 'menuVisiteur')}}\" method=\"post\">
-              
-                <input type=\"text\" id=\"login\" name=\"nom_utilisateur\" placeholder=\"Nom d'utilisateur\" required=\"required\"/>
-                <input type=\"password\" id=\"mdp\" name=\"mdp_utilisateur\" placeholder=\"Mot de passe\" required=\"required\"/>
-                <button type=\"submit\">Connexion</button>
-
-            </form>
-        </div>
-    </section>
-</div>
+{% block title %}
+    Connexion Comptable
 {% endblock %}
 
-", "comptable/connexionComptable.html.twig", "/var/www/html/GSB-FRAISv2/templates/comptable/connexionComptable.html.twig");
+{% block stylesheets %}
+    <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\" type=\"text/css\" />
+{% endblock %}
+
+{% block body %}
+    <div class=\"wrapper\">
+        <section style=\"left: 400px !important; top: 120px !important; right: 400px !important;\" class=\"login-container\">
+            <div>\t\t\t
+                <header>
+                    <img src=\"/images/gsb.png\" alt=\"\" />
+                    <h2>Identification Comptable</h2>
+                    {% if erreur is defined %}
+                        {% if erreur == 1 %}
+                        <p>Attention ! Login ou mot de passe incorrect.</p>
+                        {% endif %}
+                    {% endif %}
+                </header>
+
+                {{form(formulaire)}}
+            </div>
+        </section>
+    </div>
+{% endblock %}", "comptable/connexionComptable.html.twig", "/var/www/html/GSB-FRAIS/templates/comptable/connexionComptable.html.twig");
     }
 }

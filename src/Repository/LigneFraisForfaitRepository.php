@@ -43,8 +43,8 @@ class LigneFraisForfaitRepository extends ServiceEntityRepository
                      -> Join( 'l.idvisiteur','ff' )
                      -> addSelect('ff')
                      -> where('ff.mois = :mois')
-                     ->setParameter('mois', $mois)
-                     ->getQuery()
+                     -> setParameter('mois', $mois)
+                     -> getQuery()
                      -> getResult();
     }
     /*

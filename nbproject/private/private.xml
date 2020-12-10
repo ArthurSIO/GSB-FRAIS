@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/GSB-FRAISv2/src/Controller/VisiteurController.php</file>
-            <file>file:/var/www/html/GSB-FRAISv2/src/Repository/LignefraishorsforfaitRepository.php</file>
-            <file>file:/var/www/html/GSB-FRAISv2/src/Repository/LigneFraisForfaitRepository.php</file>
-            <file>file:/var/www/html/GSB-FRAISv2/templates/visiteur/consulterFiches.html.twig</file>
-            <file>file:/var/www/html/GSB-FRAISv2/src/Entity/Fraisforfait.php</file>
-            <file>file:/var/www/html/GSB-FRAISv2/src/Entity/LigneFraisForfait.php</file>
+            <file>file:/var/www/html/GSB-FRAIS/templates/visiteur/connexionVisiteur.html.twig</file>
+            <file>file:/var/www/html/GSB-FRAIS/templates/comptable/connexionComptable.html.twig</file>
+            <file>file:/var/www/html/GSB-FRAIS/templates/comptable/enteteComptable.html.twig</file>
+            <file>file:/var/www/html/GSB-FRAIS/templates/visiteur/enteteVisiteur.html.twig</file>
+            <file>file:/var/www/html/GSB-FRAIS/public/css/styles.css</file>
         </group>
     </open-files>
 </project-private>

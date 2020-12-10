@@ -43,7 +43,15 @@ class FichefraisRepository extends ServiceEntityRepository
                      ->getQuery()
                      -> getResult();
     }
-
+    
+    public function findByFicheFraisVa($etat){
+        return $this -> createQueryBuilder('fVA')
+                     -> where ('fVA.etat = :idEtat')
+                     -> setParameter('idEtat',$etat)
+                     -> getQuery() 
+                     -> getResult();
+    }
+    
     /*
     public function findOneBySomeField($value): ?Fichefrais
     {

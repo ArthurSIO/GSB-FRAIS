@@ -3,18 +3,23 @@
 {% block title %}
     Accueil
 {% endblock %}
-
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}" type="text/css" />
+
 {% endblock %}
 
 {% block body %}
-<div class="wrapper">
-    <section class="login-container">
-        <div>		
+
+    <div class="center-div"><h1><center> Laboratoire Galaxy Swiss Bourdin</center></h1></div>
+    
+    <div>
+    <section style="inset: 106px 400px 177px !important;" class="login-container">
+        <div class="login-container">	
             <header>
+                <img src="/images/gsb.png" alt="" />
                 <h2>Acceuil</h2>
             </header>
+            <br>
             <a href="{{path( 'visiteur')}}" >
 		<div class="link">				
                     Visiteur				
@@ -27,6 +32,6 @@
             </a>
         </div>
     </section>
+    </div>
 
-</div>
 {% endblock %}

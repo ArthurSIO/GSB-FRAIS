@@ -1,109 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Connexion Comptable{% endblock %}
-
-{% block body %}
-
-<style>
-section.login-container{
-    display: flex;
-    position: fixed;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  
-    background: #031321;
-}
-section.login-container > div{
-    width: 450px;
-  
-    margin: auto;
-  
-    padding: 20px;
-
-    text-align: center;
-
-    background: #eee;
-    border: 1px solid #ccc;
-
-    border-radius: 5px;
-
-}
-section.login-container form{
-    display: flex;
-    flex-direction: column;
-}
-form input[type="password"], 
-form input[type="text"], 
-form button[type="submit"] {
-    width: 100%;
-  
-    margin-bottom: 32px;
-    padding: 16px;
-  
-    color: #333;
-
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    outline: 0;
-}
-form input[type="text"]:focus,
-form input[type="text"]:hover,
-form input[type="password"]:focus,
-form input[type="password"]:hover {
-    background-color: #ccc;
-}
-form button[type="submit"] {
-    font-weight: bold;
-    color: #eee;
-    text-transform: uppercase;
-
-    background-color: #2196f3;
-}
-
-form button[type="submit"]:focus,
-form button[type="submit"]:hover {
-    background-color: #255784;
-}
-html{
-    box-sizing: border-box;
-}
-
-*,*:before,*:after{
-    box-sizing: inherit;
-}
-body{
-    background-color: white;
-    font-family: Helvetica, sans-serif;
-}
-.wrapper{
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
-<div class="wrapper">
-    <section class="login-container">
-        <div>
-			
-            <header>
-				{% if erreur == 1 %}
-				<p>Attention ! Login ou mot de passe incorrect.</p>
-				{% endif %}
-                <h2>Identification Comptable</h2>
-            </header>
-
-            <form action="{{path( 'menuVisiteur')}}" method="post">
-              
-                <input type="text" id="login" name="nom_utilisateur" placeholder="Nom d'utilisateur" required="required"/>
-                <input type="password" id="mdp" name="mdp_utilisateur" placeholder="Mot de passe" required="required"/>
-                <button type="submit">Connexion</button>
-
-            </form>
-        </div>
-    </section>
-</div>
+{% block title %}
+    Connexion Comptable
 {% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <section style="left: 400px !important; top: 120px !important; right: 400px !important;" class="login-container">
+            <div>			
+                <header>
+                    <img src="/images/gsb.png" alt="" />
+                    <h2>Identification Comptable</h2>
+                    {% if erreur is defined %}
+                        {% if erreur == 1 %}
+                        <p>Attention ! Login ou mot de passe incorrect.</p>
+                        {% endif %}
+                    {% endif %}
+                </header>
+
+                {{form(formulaire)}}
+            </div>
+        </section>
+    </div>
+{% endblock %}

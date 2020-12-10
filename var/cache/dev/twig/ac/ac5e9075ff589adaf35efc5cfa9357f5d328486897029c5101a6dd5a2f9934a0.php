@@ -91,7 +91,7 @@ class __TwigTemplate_df0bd4853cb8fbbdff804037b2a543e2b0d55a7ce2dd2ac1ddcf0c523a2
         $this->loadTemplate("visiteur/enteteVisiteur.html.twig", "visiteur/renseignerFiche.html.twig", 8)->display($context);
         // line 9
         echo "<div class=\"corp\">
-    renseigne fiche
+    Renseigner Fiche
 </div>
 
 
@@ -128,11 +128,11 @@ class __TwigTemplate_df0bd4853cb8fbbdff804037b2a543e2b0d55a7ce2dd2ac1ddcf0c523a2
 {% block body %}
 {%include 'visiteur/enteteVisiteur.html.twig'%}
 <div class=\"corp\">
-    renseigne fiche
+    Renseigner Fiche
 </div>
 
 
 
-{% endblock %}", "visiteur/renseignerFiche.html.twig", "/var/www/html/GSB-FRAISv2/templates/visiteur/renseignerFiche.html.twig");
+{% endblock %}", "visiteur/renseignerFiche.html.twig", "/var/www/html/GSB-FRAIS/templates/visiteur/renseignerFiche.html.twig");
     }
 }

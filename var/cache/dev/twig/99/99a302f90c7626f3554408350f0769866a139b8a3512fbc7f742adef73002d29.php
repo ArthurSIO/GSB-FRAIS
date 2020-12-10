@@ -135,6 +135,6 @@ class __TwigTemplate_c4a442e6b13e0108015546cb647b1c86ebb3a644acf817b19edd845c58e
 \t
 </div>
 
-{% endblock %}", "visiteur/menuVisiteur.html.twig", "/var/www/html/GSB-FRAISv2/templates/visiteur/menuVisiteur.html.twig");
+{% endblock %}", "visiteur/menuVisiteur.html.twig", "/var/www/html/GSB-FRAIS/templates/visiteur/menuVisiteur.html.twig");
     }
 }

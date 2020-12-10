@@ -13,7 +13,9 @@ return [
         '/visiteur/menu' => [[['_route' => 'menuVisiteur', '_controller' => 'App\\Controller\\VisiteurController::menu'], null, null, null, false, false, null]],
         '/visiteur/menu/donnerDate' => [[['_route' => 'donnerDate', '_controller' => 'App\\Controller\\VisiteurController::donnerDate'], null, null, null, false, false, null]],
         '/visiteur/menu/renseigner' => [[['_route' => 'renseigner', '_controller' => 'App\\Controller\\VisiteurController::renseigner'], null, null, null, false, false, null]],
+        '/visiteur/menu/suivreFiche' => [[['_route' => 'suivreFiche', '_controller' => 'App\\Controller\\VisiteurController::suivreFiche'], null, null, null, false, false, null]],
         '/comptable' => [[['_route' => 'comptable', '_controller' => 'App\\Controller\\ComptableController::index'], null, null, null, false, false, null]],
+        '/comptable/menu' => [[['_route' => 'menuComptable', '_controller' => 'App\\Controller\\ComptableController::menu'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

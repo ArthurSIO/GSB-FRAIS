@@ -35,7 +35,16 @@ class ComptableRepository extends ServiceEntityRepository
         ;
     }
     */
-
+    public function findByLoginAndMdp($login, $mdp)
+    {
+        $QueryBuilder = $this -> createQueryBuilder('c');
+    
+        $QueryBuilder -> where('c.login = :login')
+                      ->setParameter('login', $login)
+                      ->andWhere('c.mdp = :mdp')
+                      ->setParameter('mdp', $mdp);
+        return $QueryBuilder->getQuery() -> getResult();  
+    }
     /*
     public function findOneBySomeField($value): ?Comptable
     {

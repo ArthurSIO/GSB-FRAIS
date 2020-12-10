@@ -15,7 +15,13 @@ donnerDate:
 renseigner:
     path: /visiteur/menu/renseigner
     controller: App\Controller\VisiteurController::renseigner
+suivreFiche:
+    path: /visiteur/menu/suivreFiche
+    controller: App\Controller\VisiteurController::suivreFiche
 #controller comptable
 comptable:
     path: /comptable
     controller: App\Controller\ComptableController::index
+menuComptable:
+    path: /comptable/menu
+    controller: App\Controller\ComptableController::menu

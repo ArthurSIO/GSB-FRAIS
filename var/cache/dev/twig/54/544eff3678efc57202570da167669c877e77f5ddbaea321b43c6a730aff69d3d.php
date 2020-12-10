@@ -143,6 +143,6 @@ class __TwigTemplate_ad65bcf71cc8211af5415b5fd0f83a9e69de0306f1aa8f8255d7f2fbd60
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/var/www/html/GSB-FRAISv2/templates/base.html.twig");
+", "base.html.twig", "/var/www/html/GSB-FRAIS/templates/base.html.twig");
     }
 }

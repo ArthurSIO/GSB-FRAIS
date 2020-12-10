@@ -10,16 +10,16 @@
 
 {% block body %}
     <div class="wrapper">
-        <section class="login-container">
+        <section style="left: 400px !important; top: 120px !important; right: 400px !important;" class="login-container">
             <div>			
                 <header>
+                    <img src="/images/gsb.png" alt="" />
+                    <h2>Identification Visiteur</h2>
                     {% if erreur is defined %}
                         {% if erreur == 1 %}
                         <p>Attention ! Login ou mot de passe incorrect.</p>
                         {% endif %}
                     {% endif %}
-                    
-                    <h2>Identification Visiteur</h2>
                 </header>
 
                 {{form(formulaire)}}

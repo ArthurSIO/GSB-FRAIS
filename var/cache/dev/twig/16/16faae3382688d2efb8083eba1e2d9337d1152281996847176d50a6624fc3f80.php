@@ -57,20 +57,31 @@ class __TwigTemplate_e322a8ff90da5c9bbc35c70159114cae4b91f5ffb954db1720115acd012
 
         // line 4
         echo "<nav>
-  <ul class=\"menu\">
+    <ul class=\"menu\">
+    <img src=\"/images/gsb.png\" alt=\"\" />
+    </ul>
+    <ul class=\"menu\">
     <li>";
-        // line 6
-        echo twig_escape_filter($this->env, (isset($context["login"]) || array_key_exists("login", $context) ? $context["login"] : (function () { throw new RuntimeError('Variable "login" does not exist.', 6, $this->source); })()), "html", null, true);
-        echo "</li>
-  </ul>
-  <ul class=\"form\">
-    <li><a href=\"";
         // line 9
+        echo twig_escape_filter($this->env, (isset($context["login"]) || array_key_exists("login", $context) ? $context["login"] : (function () { throw new RuntimeError('Variable "login" does not exist.', 9, $this->source); })()), "html", null, true);
+        echo "</li>
+    </ul>
+    <ul class=\"form\">
+    <li><a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("suivreFiche");
+        echo "\">Suivre Fiche</a</li>
+    <li><a href=\"";
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("donnerDate");
         echo "\">Consulter Frais</a></li>
+    <li><a href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("renseigner");
+        echo "\">Renseigner Frais</a></li>
     <li class=\"pageV\">Menu</li>
     <li><a href=\"";
-        // line 11
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Déconnexion</a></li>   
   </ul>
@@ -93,7 +104,7 @@ class __TwigTemplate_e322a8ff90da5c9bbc35c70159114cae4b91f5ffb954db1720115acd012
 
     public function getDebugInfo()
     {
-        return array (  74 => 11,  69 => 9,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  85 => 16,  80 => 14,  76 => 13,  72 => 12,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -102,15 +113,20 @@ class __TwigTemplate_e322a8ff90da5c9bbc35c70159114cae4b91f5ffb954db1720115acd012
 
 {% block body %}
 <nav>
-  <ul class=\"menu\">
+    <ul class=\"menu\">
+    <img src=\"/images/gsb.png\" alt=\"\" />
+    </ul>
+    <ul class=\"menu\">
     <li>{{login}}</li>
-  </ul>
-  <ul class=\"form\">
+    </ul>
+    <ul class=\"form\">
+    <li><a href=\"{{path( 'suivreFiche')}}\">Suivre Fiche</a</li>
     <li><a href=\"{{path( 'donnerDate')}}\">Consulter Frais</a></li>
+    <li><a href=\"{{path( 'renseigner')}}\">Renseigner Frais</a></li>
     <li class=\"pageV\">Menu</li>
     <li><a href=\"{{path( 'accueil')}}\">Déconnexion</a></li>   
   </ul>
 </nav>
-{% endblock %}", "visiteur/enteteVisiteur.html.twig", "/var/www/html/GSB-FRAISv2/templates/visiteur/enteteVisiteur.html.twig");
+{% endblock %}", "visiteur/enteteVisiteur.html.twig", "/var/www/html/GSB-FRAIS/templates/visiteur/enteteVisiteur.html.twig");
     }
 }

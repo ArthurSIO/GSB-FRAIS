@@ -2,11 +2,16 @@
 
 {% block body %}
 <nav>
-  <ul class="menu">
+    <ul class="menu">
+    <img src="/images/gsb.png" alt="" />
+    </ul>
+    <ul class="menu">
     <li>{{login}}</li>
-  </ul>
-  <ul class="form">
+    </ul>
+    <ul class="form">
+    <li><a href="{{path( 'suivreFiche')}}">Suivre Fiche</a</li>
     <li><a href="{{path( 'donnerDate')}}">Consulter Frais</a></li>
+    <li><a href="{{path( 'renseigner')}}">Renseigner Frais</a></li>
     <li class="pageV">Menu</li>
     <li><a href="{{path( 'accueil')}}">Déconnexion</a></li>   
   </ul>

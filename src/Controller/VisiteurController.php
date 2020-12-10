@@ -32,7 +32,7 @@ class VisiteurController extends AbstractController
             $doctrine = $this -> getDoctrine();
             $repositoryObjet = $doctrine -> getRepository(Visiteur::class);
             $vi = $repositoryObjet -> findByLoginAndMdp($data['nom_utilisateur'], $data['mdp_utilisateur']);
-            if ($vi === NULL){
+            if (count($vi) == 0){
                 return $this->render('visiteur/connexionVisiteur.html.twig',['formulaire' => $form->createView(),'erreur' => $erreur = 1]        
                 );
             }
@@ -117,7 +117,15 @@ class VisiteurController extends AbstractController
         ]);
     }
     public function renseigner(Request $request){
-        return $this->render('visiteur/renseignerFiche.html.twig',['login' => $login = 0]
+        $session = $request -> getSession();
+        $login = $session -> get('login');
+        return $this->render('visiteur/renseignerFiche.html.twig',['login' => $login ]
+        );
+    }
+    public function suivreFiche(Request $request){
+        $session = $request -> getSession();
+        $login = $session -> get('login');
+        return $this->render('visiteur/suivreFiche.html.twig',['login' => $login ]
         );
     }
 }

@@ -65,17 +65,18 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
 
     }
 
-    // line 7
+    // line 6
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 8
+        // line 7
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
         echo "\" type=\"text/css\" />
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -90,14 +91,19 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 12
-        echo "<div class=\"wrapper\">
-    <section class=\"login-container\">
-        <div>\t\t
+        echo "
+    <div class=\"center-div\"><h1><center> Laboratoire Galaxy Swiss Bourdin</center></h1></div>
+    
+    <div>
+    <section style=\"inset: 106px 400px 177px !important;\" class=\"login-container\">
+        <div class=\"login-container\">\t
             <header>
+                <img src=\"/images/gsb.png\" alt=\"\" />
                 <h2>Acceuil</h2>
             </header>
+            <br>
             <a href=\"";
-        // line 18
+        // line 23
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("visiteur");
         echo "\" >
 \t\t<div class=\"link\">\t\t\t\t
@@ -105,7 +111,7 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
 \t\t</div>
             </a>
             <a href=\"";
-        // line 23
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comptable");
         echo "\">
             <div class=\"link\">
@@ -114,8 +120,8 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
             </a>
         </div>
     </section>
+    </div>
 
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -134,7 +140,7 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
 
     public function getDebugInfo()
     {
-        return array (  109 => 23,  101 => 18,  93 => 12,  86 => 11,  76 => 8,  69 => 7,  61 => 4,  54 => 3,  37 => 1,);
+        return array (  115 => 28,  107 => 23,  94 => 12,  87 => 11,  76 => 7,  69 => 6,  61 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -144,18 +150,23 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
 {% block title %}
     Accueil
 {% endblock %}
-
 {% block stylesheets %}
     <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\" type=\"text/css\" />
+
 {% endblock %}
 
 {% block body %}
-<div class=\"wrapper\">
-    <section class=\"login-container\">
-        <div>\t\t
+
+    <div class=\"center-div\"><h1><center> Laboratoire Galaxy Swiss Bourdin</center></h1></div>
+    
+    <div>
+    <section style=\"inset: 106px 400px 177px !important;\" class=\"login-container\">
+        <div class=\"login-container\">\t
             <header>
+                <img src=\"/images/gsb.png\" alt=\"\" />
                 <h2>Acceuil</h2>
             </header>
+            <br>
             <a href=\"{{path( 'visiteur')}}\" >
 \t\t<div class=\"link\">\t\t\t\t
                     Visiteur\t\t\t\t
@@ -168,9 +179,9 @@ class __TwigTemplate_5d1b045cd8cbe4fef617c4285e72fbd4a7a2ea5a305e06c728d699a8c18
             </a>
         </div>
     </section>
+    </div>
 
-</div>
 {% endblock %}
-", "accueil/index.html.twig", "/var/www/html/GSB-FRAISv2/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/var/www/html/GSB-FRAIS/templates/accueil/index.html.twig");
     }
 }

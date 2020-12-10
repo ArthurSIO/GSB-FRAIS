@@ -91,26 +91,26 @@ class __TwigTemplate_2f70392766cd248b28f771fc2923723c6f79480888e3b0ead1e49ff2dbf
 
         // line 12
         echo "    <div class=\"wrapper\">
-        <section class=\"login-container\">
+        <section style=\"left: 400px !important; top: 120px !important; right: 400px !important;\" class=\"login-container\">
             <div>\t\t\t
                 <header>
+                    <img src=\"/images/gsb.png\" alt=\"\" />
+                    <h2>Identification Visiteur</h2>
                     ";
-        // line 16
+        // line 18
         if ((isset($context["erreur"]) || array_key_exists("erreur", $context))) {
-            // line 17
+            // line 19
             echo "                        ";
-            if ((0 === twig_compare((isset($context["erreur"]) || array_key_exists("erreur", $context) ? $context["erreur"] : (function () { throw new RuntimeError('Variable "erreur" does not exist.', 17, $this->source); })()), 1))) {
-                // line 18
+            if ((0 === twig_compare((isset($context["erreur"]) || array_key_exists("erreur", $context) ? $context["erreur"] : (function () { throw new RuntimeError('Variable "erreur" does not exist.', 19, $this->source); })()), 1))) {
+                // line 20
                 echo "                        <p>Attention ! Login ou mot de passe incorrect.</p>
                         ";
             }
-            // line 20
+            // line 22
             echo "                    ";
         }
-        // line 21
-        echo "                    
-                    <h2>Identification Visiteur</h2>
-                </header>
+        // line 23
+        echo "                </header>
 
                 ";
         // line 25
@@ -137,7 +137,7 @@ class __TwigTemplate_2f70392766cd248b28f771fc2923723c6f79480888e3b0ead1e49ff2dbf
 
     public function getDebugInfo()
     {
-        return array (  117 => 25,  111 => 21,  108 => 20,  104 => 18,  101 => 17,  99 => 16,  93 => 12,  86 => 11,  76 => 8,  69 => 7,  61 => 4,  54 => 3,  37 => 1,);
+        return array (  117 => 25,  113 => 23,  110 => 22,  106 => 20,  103 => 19,  101 => 18,  93 => 12,  86 => 11,  76 => 8,  69 => 7,  61 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -154,16 +154,16 @@ class __TwigTemplate_2f70392766cd248b28f771fc2923723c6f79480888e3b0ead1e49ff2dbf
 
 {% block body %}
     <div class=\"wrapper\">
-        <section class=\"login-container\">
+        <section style=\"left: 400px !important; top: 120px !important; right: 400px !important;\" class=\"login-container\">
             <div>\t\t\t
                 <header>
+                    <img src=\"/images/gsb.png\" alt=\"\" />
+                    <h2>Identification Visiteur</h2>
                     {% if erreur is defined %}
                         {% if erreur == 1 %}
                         <p>Attention ! Login ou mot de passe incorrect.</p>
                         {% endif %}
                     {% endif %}
-                    
-                    <h2>Identification Visiteur</h2>
                 </header>
 
                 {{form(formulaire)}}
@@ -171,6 +171,6 @@ class __TwigTemplate_2f70392766cd248b28f771fc2923723c6f79480888e3b0ead1e49ff2dbf
         </section>
     </div>
 {% endblock %}
-", "visiteur/connexionVisiteur.html.twig", "/var/www/html/GSB-FRAISv2/templates/visiteur/connexionVisiteur.html.twig");
+", "visiteur/connexionVisiteur.html.twig", "/var/www/html/GSB-FRAIS/templates/visiteur/connexionVisiteur.html.twig");
     }
 }

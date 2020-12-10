@@ -9,5 +9,7 @@ return [
     'menuVisiteur' => [[], ['_controller' => 'App\\Controller\\VisiteurController::menu'], [], [['text', '/visiteur/menu']], [], []],
     'donnerDate' => [[], ['_controller' => 'App\\Controller\\VisiteurController::donnerDate'], [], [['text', '/visiteur/menu/donnerDate']], [], []],
     'renseigner' => [[], ['_controller' => 'App\\Controller\\VisiteurController::renseigner'], [], [['text', '/visiteur/menu/renseigner']], [], []],
+    'suivreFiche' => [[], ['_controller' => 'App\\Controller\\VisiteurController::suivreFiche'], [], [['text', '/visiteur/menu/suivreFiche']], [], []],
     'comptable' => [[], ['_controller' => 'App\\Controller\\ComptableController::index'], [], [['text', '/comptable']], [], []],
+    'menuComptable' => [[], ['_controller' => 'App\\Controller\\ComptableController::menu'], [], [['text', '/comptable/menu']], [], []],
 ];
